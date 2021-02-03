@@ -1,0 +1,327 @@
+body{
+    font-family: "Poppins";
+    font-size: 14px;
+    background-color: tomato;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Header */
+header{
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: tomato;
+}
+
+.toggle{
+    display: none;
+}
+
+header .logo {
+    color: rgba(255, 255, 255, 0.659);
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-weight: 600;    
+}
+
+.logo:hover{
+    color: white;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+    margin: 0px 5px;
+}
+
+header ul li a{
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+li a:hover{
+    background-color: #ffffff;
+    color: tomato;
+}
+
+li .active{
+    background-color: #bb9f3a;
+    color: black;
+}
+
+/* home */
+
+#home{
+    height: 92vh;
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+}
+
+.slider{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    color: white;
+}
+
+.slider-content:nth-child(even){
+    color: tomato;
+    background-color: white;
+    display: none;
+}
+
+.slider-content .content{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20vw;
+    text-align: center;
+}
+
+.content h1{
+    font-size: 32px;
+}
+
+.content p{
+    font-size: 14px;
+}
+
+.btn-register{
+    border: 1px solid white;
+    color: tomato;
+    margin: 8vh;
+}
+
+.btn-register:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: tomato;
+    color: rgb(255, 255, 255);
+}
+
+/* Slider Next Prev Button */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @-webkit-keyframes fade {
+    0%{opacity: 0}
+    10%{opacity: .1;}
+    20%{opacity: .2;}
+    30%{opacity: .3;}
+    40%{opacity: .4;}
+    50%{opacity: .5}
+    100%{opacity: 1;}
+  }
+  
+  @keyframes fade {
+    0%{opacity: 0}
+    10%{opacity: .1;}
+    20%{opacity: .2;}
+    30%{opacity: .3;}
+    40%{opacity: .4;}
+    50%{opacity: .5}
+    100%{opacity: 1;}
+  }
+
+
+  /* Service */
+
+#service{
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: tomato;
+    background-color: white;
+}
+
+#service h1{
+    margin: 5vh 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+#service .row{
+    display: flex;
+    margin: 3vh 0;
+}
+
+#service .row .card{
+    width: 25vw;
+    height: auto;
+    padding: 10px;
+    margin: 4vh 2vw ;
+    box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.46);
+    border-radius: 4px;
+}
+
+#service .row .card:hover{
+    color: white;
+    background-color: tomato;
+    box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.46);
+}
+
+#service .row .card .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#service .row .card .body{
+    padding: 2vh 1vw;
+    text-align: left;
+    
+}
+
+#service .row .card .body li{
+    margin: 15px 0;
+}
+
+#service .row .card .btn-service{
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    background-color: tomato;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+#service .row .card .btn-service:hover{
+    cursor: pointer;
+    color: tomato;
+    background-color: white;
+    border-color: tomato;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:750px){
+
+    header{
+        height: 8vh;
+        width: 100%;
+        justify-content: space-between;
+        background-color: tomato;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+
+    .menu{
+        position:fixed;
+        top:0;
+        left: -120%;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        padding-top: 50px;
+        margin-top: 8vh ;
+        background-color: tomato;
+        transition: 0.5s;
+        z-index: 999;
+    }
+
+    header ul li a{
+        padding: 10px 15px 10px 0px;
+    }
+
+    .active{
+        left: 0;
+        padding-left: 0;
+    }
+
+    .toggle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2vw;
+        height: 2vh;  
+        color: white;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    /* Home */
+
+    #home{
+        height: auto;
+        flex-direction: column;
+        flex: 2;
+    }
+
+    /* Service */
+
+    #service .row{
+        display: flex;
+        flex-direction: column;
+        margin: 3vh 0;
+    }
+
+    #service .row .card{
+        width: 80vw;
+        margin: 2vh 0;
+    }
+}
