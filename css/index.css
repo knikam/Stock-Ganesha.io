@@ -12,9 +12,11 @@ body{
     font-size: 14px;
     font-weight: 600;
     padding: 10px 30px;
+    border-radius: 2px;
 }
 
 /* Header */
+
 header{
     position: sticky;
     display: flex;
@@ -51,7 +53,7 @@ header ul{
 header ul li{
     position: relative;
     list-style: none;
-    margin: 0px 5px;
+    margin: 0px 3px;
 }
 
 header ul li a{
@@ -241,11 +243,16 @@ li .active{
     margin: 10px 0;
 }
 
+#service .row .card .footer{
+    display: flex;
+}
+
 #service .row .card .btn-service{
     width: 100%;
     color: white;
     font-weight: 700;
     padding: 15px;
+    margin: 2px;
     background-color: tomato;
     border : .5px solid tomato;
 }
@@ -257,6 +264,20 @@ li .active{
     border : .5px solid tomato
 }
 
+#service .row .card .btn-outline{
+    color: tomato;
+    background-color: white;
+    width: 100%;
+    font-weight: 700;
+    padding: 15px;
+    margin: 2px;
+    border : .5px solid tomato;
+}
+
+#service .row .card .btn-outline:hover{
+    color: white;
+    background-color: tomato;
+}
 
 /* Contact Us */
 #contact{

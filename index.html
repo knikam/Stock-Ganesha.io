@@ -9,11 +9,14 @@
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- VHS Animation -->
-        <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">
         <!-- JS file -->
         <script src="js/menu.js"></script>
         <script src="js/slider.js"></script>
+        <!-- Animation Js
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script>
+            new WOW().init();
+        </script> -->
     </head>
     <body onLoad="showSlides();">
      <!--[if lt IE 7]>
@@ -33,10 +36,10 @@
                     </ul>
             </header>
 
-            <section id="home">
+            <section id="home" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
                <div class="slider">
                     <div class="slider-content fade first">
-                        <div class="content">
+                        <div class="content ">
                             <h1>The stock market is filled with individuals who know the price of everything but the value of nothing.</h1>
                             <p>The stock market is filled with individuals who know the price of everything but the value of nothing.</p>
                             <button class="btn btn-register">Register</button>                          
@@ -77,6 +80,7 @@
                             </ul>
                         </div>
                         <div class="footer">
+                            <button class="btn btn-outline">Read more</button>
                             <button class="btn btn-service">Register</button>
                         </div>
                     </div>
@@ -96,6 +100,7 @@
                             </ul>
                         </div>
                         <div class="footer">
+                            <button class="btn btn-outline">Read more</button>
                             <button class="btn btn-service">Register</button>
                         </div>
                     </div>
@@ -115,6 +120,7 @@
                             </ul>
                         </div>
                         <div class="footer">
+                            <button class="btn btn-outline">Read more</button>
                             <button class="btn btn-service">Register</button>
                         </div>
                     </div>
