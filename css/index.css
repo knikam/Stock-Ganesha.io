@@ -10,6 +10,7 @@ body{
     border: none;
     outline: none;
     font-size: 14px;
+    font-weight: 600;
     padding: 10px 30px;
 }
 
@@ -97,6 +98,12 @@ li .active{
     display: none;
 }
 
+.slider-content:nth-child(odd){
+    color: white;
+    background-color: tomato;
+    display: none;
+}
+
 .slider-content .content{
     height: 92vh;
     display: flex;
@@ -118,7 +125,8 @@ li .active{
 .btn-register{
     border: 1px solid white;
     color: tomato;
-    margin: 8vh;
+    font-weight: 600;
+    margin: 2vh;
 }
 
 .btn-register:hover{
@@ -185,6 +193,7 @@ li .active{
 
 #service{
     height:auto;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,20 +215,18 @@ li .active{
 #service .row .card{
     width: 25vw;
     height: auto;
-    padding: 10px;
     margin: 4vh 2vw ;
     box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.46);
-    border-radius: 4px;
 }
 
 #service .row .card:hover{
-    color: white;
-    background-color: tomato;
-    box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.46);
+    box-shadow: 1px 1px 4px 4px rgba(255, 99, 71, 0.439);
 }
 
 #service .row .card .header{
     display: flex;
+    color:tomato;
+    text-transform: uppercase;
     justify-content: center;
     align-items: center;
 }
@@ -231,26 +238,120 @@ li .active{
 }
 
 #service .row .card .body li{
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 #service .row .card .btn-service{
     width: 100%;
     color: white;
     font-weight: 700;
+    padding: 15px;
     background-color: tomato;
-    border: 1px solid white;
-    border-radius: 4px;
+    border : .5px solid tomato;
 }
 
 #service .row .card .btn-service:hover{
     cursor: pointer;
     color: tomato;
     background-color: white;
-    border-color: tomato;
+    border : .5px solid tomato
 }
 
 
+/* Contact Us */
+#contact{
+
+    position: relative;
+    display: flex;
+    height:92vh;
+    color: white;
+    background-color:tomato;
+    background-position: right;
+}
+.contactus{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 5vh;
+    align-items: center;
+}
+
+.contactus h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.contact-form form input,
+.contact-form form textarea{
+    border:none;
+    outline: none;
+    margin: 5px;
+    padding: 15px;
+    width: 300px;
+    background-color: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    border: .5px solid rgb(255, 255, 255);
+    border-radius: 2px;
+}
+
+.contact-form form input:focus, textarea:focus{
+    border: 1px solid white;
+    background-color: rgb(255, 255, 255);
+}
+
+.contact-form form input[type="button"]{
+    border:none;
+    margin: 5px;
+    padding: 15px;
+    width: 150px;
+    background-color: tomato;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+}
+
+.contact-form form input[type="button"]:hover{
+    cursor: pointer;
+    background-color: white;
+    color: tomato;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+.contact-info h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-info p{
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.contact-info .box{
+    display: flex;
+    flex-direction: row;
+}
+
+.box .icon{
+    margin-top: 20px;
+}
+
+.box .text{
+    margin-left: 10px;
+}
 
 
 
@@ -324,4 +425,37 @@ li .active{
         width: 80vw;
         margin: 2vh 0;
     }
+
+    /* Contact us */
+    #contact{
+        flex-direction: column;
+        height: max-content;
+    }
+
+    #contact  h1{
+        font-size: 24px;
+   }
+
+    .contactus{
+        width: 100%;
+    }
+
+    .contact-form form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea{
+    border:none;
+    outline: none;
+    margin: 4px;
+    padding: 10px;
+    width: 80vw;
+    background-color: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    border: .5px solid rgb(80, 80, 80);
+    border-radius: 2px;
+}
 }
