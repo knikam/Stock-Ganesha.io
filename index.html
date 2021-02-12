@@ -12,11 +12,7 @@
         <!-- JS file -->
         <script src="js/menu.js"></script>
         <script src="js/slider.js"></script>
-        <!-- Animation Js
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-        <script>
-            new WOW().init();
-        </script> -->
+
     </head>
     <body onLoad="showSlides();">
      <!--[if lt IE 7]>
@@ -25,15 +21,26 @@
 
             <!-- Header -->
             <header id="nav">
-                <a href="#" class="logo">Stock Ganesh</a>
+                <a href="#" class="logo">Stock Ganesha</a>
                 <div class="toggle" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
-                    <ul class="menu" onclick="toggleMenu()">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#service">Services</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#register">Register</a></li>
-                        <li><a href="#login">Login</a></li>
-                    </ul>
+                    <div class="menu">
+                        <div class="menu-items">
+                            <ul onclick="toggleMenu()">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#service">Services</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                                <li><a href="#register">Register</a></li>
+                                <li><a href="#login">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="social-icon">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                            <a href=""><i class="fa fa-telegram"></i></a>
+                            <a href=""><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                   
             </header>
 
             <section id="home" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
@@ -47,16 +54,24 @@
                     </div>
                     <div class="slider-content fade second">
                         <div class="content">
-                            <h1>The stock market is filled with individuals who know the price of everything but the value of nothing.</h1>
+                            <h1>A stock is a security that represents the ownership of a fraction of a corporation.</h1>
                             <p>The best stock market quotes teach investors how success in the market depends on playing the odds instead of following natural instincts.</p>
                             <button class="btn btn-register">Contact Us</button>                          
                         </div>
                     </div>
                     <div class="slider-content fade third">
                         <div class="content">
-                            <h1>The stock market is filled with individuals who know the price of everything but the value of nothing.</h1>
+                            <h1>Microsoft Word 97, 98, 2000, and 2001 include an undocumented feature that generates all of the sample text I need. Maybe you’ll find it helpful too.</h1>
                             <p>The top investing quotes from contrarians tell investors how they can profit by going against popular opinion.</p>
                             <button class="btn btn-register">About Us</button>                          
+                        </div>
+                    </div>
+               </div>
+               <div class="right-side">
+                    <div class="image-content ">
+                        <div class="content ">
+                            <div class="cover"></div>
+                           <img src="./images/stock.png" alt="stock market broker">                        
                         </div>
                     </div>
                </div>
@@ -65,7 +80,7 @@
             <section id="service">
                 <h1>A stock  is a security that represents the  ownership of a fraction of a corporation.</h1>
                 <div class="row">
-                    <div class="card">
+                    <div class="card wow bounceInUp">
                         <div class="header">
                             <h2>Service Name</h2>
                         </div>
@@ -181,8 +196,8 @@
                     </div>
             </section>
 
-            <section id="register">
-
+            <section id="register" class="center">
+                
             </section>
     </body>
 </html>

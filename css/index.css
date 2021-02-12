@@ -15,6 +15,12 @@ body{
     border-radius: 2px;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Header */
 
 header{
@@ -24,10 +30,16 @@ header{
     left: 0;
     width: 100%;
     height: 8vh;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 1000;
     background-color: tomato;
+}
+
+.menu{
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
 }
 
 .toggle{
@@ -37,6 +49,8 @@ header{
 header .logo {
     color: rgba(255, 255, 255, 0.659);
     font-size: 24px;
+    margin-left: 10px;
+    text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1.5px;
     font-weight: 600;    
@@ -67,20 +81,72 @@ header ul li a{
     border-radius: 2px;
 }
 
-li a:hover{
+header ul li a::before{
+    content:'';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left:0;
+    border-radius: 2px;
+    z-index: -1;
+    transition: all .6s;
+
+}
+
+header ul li a:hover::before{
+    width: 100%;
     background-color: #ffffff;
+}
+
+li a:hover{
     color: tomato;
 }
+
 
 li .active{
     background-color: #bb9f3a;
     color: black;
 }
 
-/* home */
+
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon i{
+    color: white;
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+.social-icon .fa:hover{
+    background-color: white;
+    border-radius: 4px;
+}
+
+.social-icon .fa-facebook:hover{
+    color: #3b5998;
+}
+
+.social-icon .fa-instagram:hover{
+    color: #cd486b;
+}
+
+.social-icon .fa-telegram:hover{
+    color: #0088cc;
+}
+
+.social-icon .fa-youtube:hover{
+    color: #ff0000;
+}
+
+/* home left side */
 
 #home{
-    height: 92vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex: 3;
@@ -88,21 +154,21 @@ li .active{
 
 .slider{
     height: 100%;
-    width: 100%;
     position: relative;
     margin: auto;
     color: white;
 }
 
-.slider-content:nth-child(even){
+
+
+/* .slider-content:nth-child(even){
     color: tomato;
     background-color: white;
     display: none;
-}
+} */
 
 .slider-content:nth-child(odd){
     color: white;
-    background-color: tomato;
     display: none;
 }
 
@@ -112,7 +178,7 @@ li .active{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20vw;
+    padding: 0 5vw;
     text-align: center;
 }
 
@@ -128,7 +194,7 @@ li .active{
     border: 1px solid white;
     color: tomato;
     font-weight: 600;
-    margin: 2vh;
+    margin: 2vh 2vh 5vh 2vh;
 }
 
 .btn-register:hover{
@@ -138,7 +204,6 @@ li .active{
     color: rgb(255, 255, 255);
 }
 
-/* Slider Next Prev Button */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -165,30 +230,76 @@ li .active{
 
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 1s;
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 1s;
   }
   
   @-webkit-keyframes fade {
-    0%{opacity: 0}
-    10%{opacity: .1;}
-    20%{opacity: .2;}
-    30%{opacity: .3;}
-    40%{opacity: .4;}
-    50%{opacity: .5}
-    100%{opacity: 1;}
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
   }
   
   @keyframes fade {
-    0%{opacity: 0}
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    /* 0%{opacity: 0}
     10%{opacity: .1;}
     20%{opacity: .2;}
     30%{opacity: .3;}
     40%{opacity: .4;}
     50%{opacity: .5}
-    100%{opacity: 1;}
+    100%{opacity: 1;} */
   }
+
+  /* Home Right Side */
+
+  .right-side{
+    height: 100%;
+    position: relative;
+    margin: auto;
+    color: white;
+}
+
+.image-content .content{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10vw;
+    text-align: center;
+}
+
+.image-content .content img{
+    height: 30vw;
+    width: 30vw;
+}
+
+.image-content .content .cover{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    opacity: .1;
+    background-color: rgb(8, 3, 2);
+    border-radius: 10px;
+}
+
+.image-content .content .cover:hover{
+    background-color: rgb(192, 72, 51);
+    opacity: .3;
+}
+
 
 
   /* Service */
@@ -215,19 +326,38 @@ li .active{
 }
 
 #service .row .card{
+    position: relative;
     width: 25vw;
     height: auto;
-    margin: 4vh 2vw ;
+    overflow:auto;
+    margin: 0vh 4vw 0 0  ;
+    padding: 5px;
     box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.46);
+    z-index: 1;
+}
+
+#service .row .card::before{
+   content:'';
+   height: 2%;
+   min-height: 2vh;
+   width: 2vw;
+   position: absolute;
+   background:linear-gradient(30deg,rgb(255, 75, 34),rgb(253, 119, 96));
+   z-index: -1;
+   transition: all .5s;
 }
 
 #service .row .card:hover{
-    box-shadow: 1px 1px 4px 4px rgba(255, 99, 71, 0.439);
+    color: white;
+}
+
+#service .row .card:hover::before{
+    width: 25vw;
+    height: 78%
 }
 
 #service .row .card .header{
     display: flex;
-    color:tomato;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
@@ -245,6 +375,7 @@ li .active{
 
 #service .row .card .footer{
     display: flex;
+    z-index: 1;
 }
 
 #service .row .card .btn-service{
@@ -254,7 +385,7 @@ li .active{
     padding: 15px;
     margin: 2px;
     background-color: tomato;
-    border : .5px solid tomato;
+    border : .5px solid white;
 }
 
 #service .row .card .btn-service:hover{
@@ -277,6 +408,7 @@ li .active{
 #service .row .card .btn-outline:hover{
     color: white;
     background-color: tomato;
+    border : .5px solid white;
 }
 
 /* Contact Us */
@@ -313,7 +445,7 @@ li .active{
     border:none;
     outline: none;
     margin: 5px;
-    padding: 15px;
+    padding: 10px;
     width: 300px;
     background-color: rgb(226, 226, 226);
     color: rgb(0, 0, 0);
@@ -406,10 +538,22 @@ li .active{
         z-index: 999;
     }
 
-    header ul li a{
-        padding: 10px 15px 10px 0px;
+    .social-icon{
+        width: 100%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
+    header ul li a{
+        padding: 10px 15px 10px 15px;
+    }
+
+    header ul{
+         display: flex;
+        flex-direction: column;
+    }
     .active{
         left: 0;
         padding-left: 0;
@@ -426,7 +570,7 @@ li .active{
         cursor: pointer;
     }
 
-    /* Home */
+    /* Home left */
 
     #home{
         height: auto;
@@ -434,6 +578,10 @@ li .active{
         flex: 2;
     }
 
+    /* home right */
+    .right-side{
+        display: none;
+    }
     /* Service */
 
     #service .row{
@@ -444,13 +592,31 @@ li .active{
 
     #service .row .card{
         width: 80vw;
+        height : 450px;
         margin: 2vh 0;
+    }
+
+    #service .row .card:hover{
+    color: white;
+}
+
+    #service .row .card:hover::before{
+        width: 80vw;
+        height: 450px;
+    }
+
+    #service .row .card .footer{
+       position: absolute;
+       width: 80vw;
+       bottom: 10px;
+        
     }
 
     /* Contact us */
     #contact{
         flex-direction: column;
         height: max-content;
+        padding: 0 10vw;
     }
 
     #contact  h1{
@@ -476,7 +642,7 @@ li .active{
     background-color: rgb(226, 226, 226);
     color: rgb(0, 0, 0);
     font-size: 14px;
-    border: .5px solid rgb(80, 80, 80);
+    border: .5px solid rgb(255, 255, 255);
     border-radius: 2px;
 }
 }
