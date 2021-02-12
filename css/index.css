@@ -507,6 +507,124 @@ li .active{
 }
 
 
+/* Register */
+
+#register{
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#register .card{
+    width: 50vw;
+    display: flex;
+    flex: 4;
+    margin: 8vw;
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0,.3);
+}
+
+#register .side-bar{
+    height: 93vh;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    opacity: .2;
+    background-color: tomato;
+    transition: all 1s;
+}
+
+#register .side-bar:hover{
+    opacity: .2;
+    background-color: rgb(0, 0, 0);
+}
+
+#register .left{
+    flex: 2;
+    padding: 2vw;
+    color: white;
+    background-color: tomato;
+}
+
+#register .left:hover{
+    background-color: tomato;
+    color: white;
+}
+
+
+
+#register .left p{
+    font-size: 14px;
+    text-align: center;
+}
+
+#register .left h1{
+
+    text-align: center;
+}
+
+#register .right{
+    flex: 2;
+    padding: 2vw;
+}
+
+#register .right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right form input[type="text"], 
+.right form input[type="password"],
+.right form input[type="number"]{
+    width: 300px;
+    padding: 15px;
+    margin: 1vh 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.337);
+    border: 0.5px solid rgba(128, 128, 128, 0.337);
+}
+
+.right form .input-name input[type="text"]{
+    width: 130px;
+}
+
+.right form input[type="text"]:focus, 
+.right form input[type="password"]:focus,
+.right form input[type="number"]:focus{
+    background-color: white;
+    border: 0.5px solid tomato;
+}
+
+.right form input[type="button"]{
+    width: 335px;
+    padding: 15px;
+    margin: 1vh 0;
+}
+
+.right form .btn-reg{
+    color: tomato;
+    background-color: white;
+    border: 1px solid tomato;
+    outline: none;
+}
+
+.right form .btn-reg:hover{
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 
 
@@ -634,15 +752,26 @@ li .active{
 
     .contact-form form input,
     .contact-form form textarea{
-    border:none;
-    outline: none;
-    margin: 4px;
-    padding: 10px;
-    width: 80vw;
-    background-color: rgb(226, 226, 226);
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    border: .5px solid rgb(255, 255, 255);
-    border-radius: 2px;
-}
+        border:none;
+        outline: none;
+        margin: 4px;
+        padding: 10px;
+        width: 80vw;
+        background-color: rgb(226, 226, 226);
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        border: .5px solid rgb(255, 255, 255);
+        border-radius: 2px;
+    }
+
+    /* Register */
+
+    #register .card{
+        flex-direction: column;
+        margin: 1vh 10px;
+    }
+
+    #register .side-bar{
+        display: none;
+    }
 }
