@@ -9,9 +9,12 @@
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <!-- JS file -->
         <script src="js/menu.js"></script>
         <script src="js/slider.js"></script>
+        <script src="js/index.js"></script>
 
     </head>
     <body onLoad="showSlides();">
@@ -20,7 +23,7 @@
         <![endif]-->
 
             <!-- Header -->
-            <header id="nav">
+            <header id="nav" class="sticky">
                 <a href="#" class="logo">Stock Ganesha</a>
                 <div class="toggle" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
                     <div class="menu">
@@ -43,182 +46,184 @@
                    
             </header>
 
-            <section id="home" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
-               <div class="slider">
-                    <div class="slider-content fade first">
-                        <div class="content ">
-                            <h1>The stock market is filled with individuals who know the price of everything but the value of nothing.</h1>
-                            <p>The stock market is filled with individuals who know the price of everything but the value of nothing.</p>
-                            <button class="btn btn-register">Register</button>                          
-                        </div>
+            <main>
+                <section id="home" class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="slider">
+                         <div class="slider-content fade first">
+                             <div class="content ">
+                                 <h1>The stock market is filled with individuals who know the price of everything but the value of nothing.</h1>
+                                 <p>The stock market is filled with individuals who know the price of everything but the value of nothing.</p>
+                                 <button class="btn btn-register">Register</button>                          
+                             </div>
+                         </div>
+                         <div class="slider-content fade second">
+                             <div class="content">
+                                 <h1>A stock is a security that represents the ownership of a fraction of a corporation.</h1>
+                                 <p>The best stock market quotes teach investors how success in the market depends on playing the odds instead of following natural instincts.</p>
+                                 <button class="btn btn-register">Contact Us</button>                          
+                             </div>
+                         </div>
+                         <div class="slider-content fade third">
+                             <div class="content">
+                                 <h1>Microsoft Word 97, 98, 2000, and 2001 include an undocumented feature that generates all of the sample text I need. Maybe you’ll find it helpful too.</h1>
+                                 <p>The top investing quotes from contrarians tell investors how they can profit by going against popular opinion.</p>
+                                 <button class="btn btn-register">About Us</button>                          
+                             </div>
+                         </div>
                     </div>
-                    <div class="slider-content fade second">
-                        <div class="content">
-                            <h1>A stock is a security that represents the ownership of a fraction of a corporation.</h1>
-                            <p>The best stock market quotes teach investors how success in the market depends on playing the odds instead of following natural instincts.</p>
-                            <button class="btn btn-register">Contact Us</button>                          
-                        </div>
+                    <div class="right-side">
+                         <div class="image-content ">
+                             <div class="content ">
+                                 <div class="cover"></div>
+                                <img src="./images/stock.png" alt="stock market broker">                        
+                             </div>
+                         </div>
                     </div>
-                    <div class="slider-content fade third">
-                        <div class="content">
-                            <h1>Microsoft Word 97, 98, 2000, and 2001 include an undocumented feature that generates all of the sample text I need. Maybe you’ll find it helpful too.</h1>
-                            <p>The top investing quotes from contrarians tell investors how they can profit by going against popular opinion.</p>
-                            <button class="btn btn-register">About Us</button>                          
-                        </div>
-                    </div>
-               </div>
-               <div class="right-side">
-                    <div class="image-content ">
-                        <div class="content ">
-                            <div class="cover"></div>
-                           <img src="./images/stock.png" alt="stock market broker">                        
-                        </div>
-                    </div>
-               </div>
-            </section>
-
-            <section id="service">
-                <h1>A stock  is a security that represents the  ownership of a fraction of a corporation.</h1>
-                <div class="row">
-                    <div class="card wow bounceInUp">
-                        <div class="header">
-                            <h2>Service Name</h2>
-                        </div>
-                        <div class="body">
-                            <ul>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                            </ul>
-                        </div>
-                        <div class="footer">
-                            <button class="btn btn-outline">Read more</button>
-                            <button class="btn btn-service">Register</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="header">
-                            <h2>Service Name</h2>
-                        </div>
-                        <div class="body">
-                            <ul>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                            </ul>
-                        </div>
-                        <div class="footer">
-                            <button class="btn btn-outline">Read more</button>
-                            <button class="btn btn-service">Register</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="header">
-                            <h2>Service Name</h2>
-                        </div>
-                        <div class="body">
-                            <ul>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                                <li>A stock  is a security that represents the 
-                                    ownership of a fraction of a corporation.</li>
-                            </ul>
-                        </div>
-                        <div class="footer">
-                            <button class="btn btn-outline">Read more</button>
-                            <button class="btn btn-service">Register</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <div class="contactus">
-                    <h1>Drop your query here</h1>
-                    <div class="contact-form">
-                        <form action="" method="post">
-                            <input type="text" name="name" placeholder="Your Name"/>
-                            <input type="email" name="email" placeholder="Email Id"/>
-                            <input type="number" name="number" placeholder="Mobile Number"/>
-                            <textarea name="message" placeholder="Your Message"></textarea>
-                            <input type="button" name="submit" value="Submit"/>
-                        </form>
-                    </div>
-                </div>
-                    <div class="contact-info">
-                        <h1>Reach us through</h1>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Address</h3>
-                                <p>C-1010, Teerth Technospace Behind Mercedes Benz Showroom Mumbai,<br> Pune Banglore Highway Pashan Exit, Baner, Pune,<br> Maharashtra 411045</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Phone</h3>
-                                <p>+91-9049-6097-47</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-envelope-o"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Email Id</h3>
-                                <p>kalpeshnikam1080@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-linkedin"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Linked In</h3>
-                                <p>www.linkedin.com/knikam1080</p>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section id="register" class="center">
-                <!-- <div class="side-bar"></div> -->
-                <div class="card">
-                    <div class="left">
-                        <h1>Join us our pro program.</h1>
-                        <p>In pro proram we will give you share market trading insight calls and profite making tips.</p>
-                    </div>
-                    <div class="right">
-                        <form class=form>
-                            <div class="input-name">
-                                <input type="text" placeholder="First Name">
-                                <input type="text" placeholder="Last Name">
-                            </div>
-                            <input type="number" placeholder="Mobile No">
-                            <input type="text" placeholder="Enter Email">
-                            <input type="password" placeholder="Enter Password">
-                            <input type="password" placeholder="Confirm Password">
-                            <input type="button" value="Register" class="btn btn-reg">
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <section id="footer">
+                 </section>
+     
+                 <section id="service">
+                     <h1>A stock  is a security that represents the  ownership of a fraction of a corporation.</h1>
+                     <div class="row">
+                         <div class="card wow bounceInUp">
+                             <div class="header">
+                                 <h2>Service Name</h2>
+                             </div>
+                             <div class="body">
+                                 <ul>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                 </ul>
+                             </div>
+                             <div class="footer">
+                                 <button class="btn btn-outline">Read more</button>
+                                 <button class="btn btn-service">Register</button>
+                             </div>
+                         </div>
+     
+                         <div class="card">
+                             <div class="header">
+                                 <h2>Service Name</h2>
+                             </div>
+                             <div class="body">
+                                 <ul>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                 </ul>
+                             </div>
+                             <div class="footer">
+                                 <button class="btn btn-outline">Read more</button>
+                                 <button class="btn btn-service">Register</button>
+                             </div>
+                         </div>
+     
+                         <div class="card">
+                             <div class="header">
+                                 <h2>Service Name</h2>
+                             </div>
+                             <div class="body">
+                                 <ul>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                     <li>A stock  is a security that represents the 
+                                         ownership of a fraction of a corporation.</li>
+                                 </ul>
+                             </div>
+                             <div class="footer">
+                                 <button class="btn btn-outline">Read more</button>
+                                 <button class="btn btn-service">Register</button>
+                             </div>
+                         </div>
+                     </div>
+                 </section>
+     
+                 <section id="contact">
+                     <div class="contactus">
+                         <h1>Drop your query here</h1>
+                         <div class="contact-form">
+                             <form action="" method="post">
+                                 <input type="text" name="name" placeholder="Your Name"/>
+                                 <input type="email" name="email" placeholder="Email Id"/>
+                                 <input type="number" name="number" placeholder="Mobile Number"/>
+                                 <textarea name="message" placeholder="Your Message"></textarea>
+                                 <input type="button" name="submit" value="Submit"/>
+                             </form>
+                         </div>
+                     </div>
+                         <div class="contact-info">
+                             <h1>Reach us through</h1>
+                             <div class="box">
+                                 <div class="icon">
+                                     <i class="fa fa-map-marker"></i>
+                                 </div>
+                                 <div class="text">
+                                     <h3>Address</h3>
+                                     <p>C-1010, Teerth Technospace Behind Mercedes Benz Showroom Mumbai,<br> Pune Banglore Highway Pashan Exit, Baner, Pune,<br> Maharashtra 411045</p>
+                                 </div>
+                             </div>
+                             <div class="box">
+                                 <div class="icon">
+                                     <i class="fa fa-phone"></i>
+                                 </div>
+                                 <div class="text">
+                                     <h3>Phone</h3>
+                                     <p>+91-9049-6097-47</p>
+                                 </div>
+                             </div>
+                             <div class="box">
+                                 <div class="icon">
+                                     <i class="fa fa-envelope-o"></i>
+                                 </div>
+                                 <div class="text">
+                                     <h3>Email Id</h3>
+                                     <p>kalpeshnikam1080@gmail.com</p>
+                                 </div>
+                             </div>
+                             <div class="box">
+                                 <div class="icon">
+                                     <i class="fa fa-linkedin"></i>
+                                 </div>
+                                 <div class="text">
+                                     <h3>Linked In</h3>
+                                     <p>www.linkedin.com/knikam1080</p>
+                                 </div>
+                             </div>
+                         </div>
+                 </section>
+     
+                 <section id="register" class="center">
+                     <!-- <div class="side-bar"></div> -->
+                     <div class="card">
+                         <div class="left">
+                             <h1>Join us our pro program.</h1>
+                             <p>In pro proram we will give you share market trading insight calls and profite making tips.</p>
+                         </div>
+                         <div class="right">
+                             <form class=form>
+                                 <div class="input-name">
+                                     <input type="text" placeholder="First Name">
+                                     <input type="text" placeholder="Last Name">
+                                 </div>
+                                 <input type="number" placeholder="Mobile No">
+                                 <input type="text" placeholder="Enter Email">
+                                 <input type="password" placeholder="Enter Password">
+                                 <input type="password" placeholder="Confirm Password">
+                                 <input type="button" value="Register" class="btn btn-reg">
+                             </form>
+                         </div>
+                     </div>
+                 </section>
+            </main>
+            <footer id="footer">
                 <div class="footer">
                     <div class="about-us">
                         <h1>Stock Ganesha</h1>
@@ -249,6 +254,7 @@
                         <a href="">Terms and Conditions</a>
                     </div>
                 </div>
-            </section>
+            </footer>
+
     </body>
 </html>
