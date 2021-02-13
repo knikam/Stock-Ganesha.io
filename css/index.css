@@ -1,6 +1,6 @@
 body{
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 12px;
     background-color: tomato;
     margin: 0;
     padding: 0;
@@ -230,9 +230,9 @@ li .active{
 
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
   }
   
   @-webkit-keyframes fade {
@@ -305,7 +305,7 @@ li .active{
   /* Service */
 
 #service{
-    height:auto;
+    height:92vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -526,7 +526,7 @@ li .active{
     box-shadow: 1px 1px 4px 2px rgb(0, 0, 0,.3);
 }
 
-#register .side-bar{
+/* #register .side-bar{
     height: 93vh;
     width: 50%;
     position: absolute;
@@ -539,35 +539,40 @@ li .active{
 #register .side-bar:hover{
     opacity: .2;
     background-color: rgb(0, 0, 0);
-}
+} */
 
 #register .left{
+    display: flex;
+    flex-direction: column;
     flex: 2;
     padding: 2vw;
     color: white;
     background-color: tomato;
+    justify-content: center;
+    align-items: center;
 }
-
-#register .left:hover{
-    background-color: tomato;
-    color: white;
-}
-
 
 
 #register .left p{
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
 }
 
 #register .left h1{
-
+    font-size: 24px;
     text-align: center;
 }
 
 #register .right{
     flex: 2;
     padding: 2vw;
+    background: #fff;
+    transition: all .5s;
+}
+
+#register .right:hover{
+    transform: scale(1.02);
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0,.3);
 }
 
 #register .right form{
@@ -599,6 +604,8 @@ li .active{
 .right form input[type="number"]:focus{
     background-color: white;
     border: 0.5px solid tomato;
+    transform: scale(1.01);
+    transition: all .3s;
 }
 
 .right form input[type="button"]{
@@ -620,12 +627,81 @@ li .active{
     cursor: pointer;
 }
 
+/* Footer */
 
+#footer{
+    height: auto;
+    background-color: rgb(202, 78, 56);   
+}
 
+.footer{
+    position: relative;
+    display: flex;
+    flex: 4;
+    color: white;
+    padding: 1vw 2vw 2vw 2vw;
+}
 
+.about-us{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding:0 4vw;
+}
 
+#footer .about-us p{
+    text-align: justify;
+}
 
+#footer .links{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3vw;
+}
+#footer .links ul{
+    padding: 0;
+}
 
+#footer .links ul li{
+    list-style: none;
+    margin: 4px;
+}
+
+#footer .links ul a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer .links ul a:hover{
+    font-weight: bold;
+
+}
+
+#footer .social-media h1{
+    margin-left: 12px;
+}
+
+#footer .end-line{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 6vw;
+}
+
+#footer .end-line p{
+    margin: 0;
+}
+
+#footer .end-line a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#footer .end-line p{
+    font-weight: bold;
+    color: white;
+}
 
 
 @media screen and (max-width:750px){
@@ -656,7 +732,7 @@ li .active{
         z-index: 999;
     }
 
-    .social-icon{
+    #header .social-icon{
         width: 100%;
         position: fixed;
         display: flex;
@@ -701,6 +777,10 @@ li .active{
         display: none;
     }
     /* Service */
+
+    #service{
+        height: auto;
+    }
 
     #service .row{
         display: flex;
@@ -773,5 +853,9 @@ li .active{
 
     #register .side-bar{
         display: none;
+    }
+
+    .footer{
+        flex-direction: column;
     }
 }
