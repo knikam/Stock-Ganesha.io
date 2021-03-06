@@ -1,0 +1,161 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins";
+    font-size: 12px;
+    background-color: tomato;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 2px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    padding-top: 8vh;
+}
+
+
+/* Login Page */
+
+#register{
+    height:92vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#register .card{
+    width: 50vw;
+    display: flex;
+    flex: 4;
+    margin: 8vw;
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0,.3);
+}
+
+/* #register .side-bar{
+    height: 93vh;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    opacity: .2;
+    background-color: tomato;
+    transition: all 1s;
+}
+
+#register .side-bar:hover{
+    opacity: .2;
+    background-color: rgb(0, 0, 0);
+} */
+
+#register .left{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 2vw;
+    color: white;
+    background-color: tomato;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#register .left p{
+    font-size: 12px;
+    text-align: center;
+}
+
+#register .left h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+#register .right{
+    flex: 2;
+    padding: 2vw;
+    background: #fff;
+    transition: all .5s;
+}
+
+#register .right:hover{
+    transform: scale(1.02);
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0,.3);
+}
+
+#register .right .header{
+    padding: 10px;
+}
+
+#register .right .header h1{
+    font-size: 28px;
+    text-align: center;
+    color: tomato;
+}
+
+#register .right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right form input[type="text"], 
+.right form input[type="password"],
+.right form input[type="number"]{
+    width: 300px;
+    padding: 15px;
+    margin: 1vh 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.337);
+    border: 0.5px solid rgba(128, 128, 128, 0.337);
+}
+
+.right form .input-name input[type="text"]{
+    width: 130px;
+}
+
+.right form input[type="text"]:focus, 
+.right form input[type="password"]:focus,
+.right form input[type="number"]:focus{
+    background-color: white;
+    border: 0.5px solid tomato;
+    transform: scale(1.01);
+    transition: all .3s;
+}
+
+.right form input[type="submit"]{
+    width: 335px;
+    padding: 15px;
+    margin: 1vh 0;
+}
+
+.right form .btn-reg{
+    color: tomato;
+    background-color: white;
+    border: 1px solid tomato;
+    outline: none;
+}
+
+.right form .btn-reg:hover{
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+}

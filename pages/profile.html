@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | StockGanesha</title>
+
+    <link rel="stylesheet" href="../css/profile.css">
+     <!-- Popping Font -->
+     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Jquery -->
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+     <!-- JS file -->
+</head>
+
+<body>
+    <nav id="mySidenav" class="sidenav">
+        <h1 class="title">StockGanesha</h1>
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="#profile">Profile</a>
+        <a href="#my-subscription">My Subscription</a>
+        <a href="#add-subscription">Add Subscription</a>
+        <a href="#">Cart</a>
+    </nav>
+    <div class="main">
+        <span class="open-btn"  onclick="openNav()">&#9776;</span>
+        <section id="profile">
+            
+        </section>
+        <section id="my-subscription">
+
+        </section>
+        <section id="add-subscription">
+
+        </section>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "100vw";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0vw";
+        }
+        </script>
+</body>
+
+</html>
