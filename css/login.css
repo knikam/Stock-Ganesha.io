@@ -4,8 +4,8 @@ html{
 
 body{
     font-family: "Poppins";
-    font-size: 12px;
-    background-color: tomato;
+    font-size: 14px;
+    background-color: #1c232d;
     margin: 0;
     padding: 0;
 }
@@ -55,7 +55,7 @@ section{
     position: absolute;
     left: 0;
     opacity: .2;
-    background-color: tomato;
+    background-color: #1c232d;
     transition: all 1s;
 }
 
@@ -70,7 +70,7 @@ section{
     flex: 2;
     padding: 2vw;
     color: white;
-    background-color: tomato;
+    background-color: #1c232d;
     justify-content: center;
     align-items: center;
 }
@@ -105,7 +105,7 @@ section{
 #register .right .header h1{
     font-size: 28px;
     text-align: center;
-    color: tomato;
+    color: #1c232d;
 }
 
 #register .right form{
@@ -136,7 +136,7 @@ section{
 .right form input[type="password"]:focus,
 .right form input[type="number"]:focus{
     background-color: white;
-    border: 0.5px solid tomato;
+    border: 0.5px solid #1c232d;
     transform: scale(1.01);
     transition: all .3s;
 }
@@ -148,14 +148,14 @@ section{
 }
 
 .right form .btn-reg{
-    color: tomato;
+    color: #1c232d;
     background-color: white;
-    border: 1px solid tomato;
+    border: 1px solid #1c232d;
     outline: none;
 }
 
 .right form .btn-reg:hover{
     color: white;
-    background-color: tomato;
+    background-color: #1c232d;
     cursor: pointer;
 }

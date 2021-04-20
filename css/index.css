@@ -4,8 +4,8 @@ html{
 
 body{
     font-family: "Poppins";
-    font-size: 12px;
-    background-color: tomato;
+    font-size: 14px;
+    background-color: #1c232d;
     margin: 0;
     padding: 0;
 }
@@ -31,7 +31,7 @@ section{
 
 /* Header */
 
-header{
+header{ 
     position: fixed;
     display: flex;
     top: 0;
@@ -41,7 +41,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background-color: tomato;
+    background-color: #1c232d;
 }
 
 .menu{
@@ -97,9 +97,9 @@ header ul li a::before{
     height: 100%;
     bottom: 0;
     left:0;
-    border-radius: 2px;
+    border-radius: 0px;
     z-index: -1;
-    transition: all .6s;
+    transition: all .3s;
 
 }
 
@@ -109,7 +109,7 @@ header ul li a:hover::before{
 }
 
 li a:hover{
-    color: tomato;
+    color: #1c232d;
 }
 
 
@@ -129,6 +129,7 @@ li .active{
     color: white;
     font-size: 22px;
     padding: 10px 15px;
+    transition: all 1.5s;
 }
 
 .social-icon .fa:hover{
@@ -172,7 +173,7 @@ li .active{
 
 
 /* .slider-content:nth-child(even){
-    color: tomato;
+    color: #1c232d;
     background-color: white;
     display: none;
 } */
@@ -202,7 +203,7 @@ li .active{
 
 .btn-register{
     border: 1px solid white;
-    color: tomato;
+    color: #1c232d;
     font-weight: 600;
     margin: 2vh 2vh 5vh 2vh;
 }
@@ -210,7 +211,7 @@ li .active{
 .btn-register:hover{
     cursor: pointer;
     border: 1px solid white;
-    background-color: tomato;
+    background-color: #1c232d;
     color: rgb(255, 255, 255);
 }
 
@@ -306,7 +307,7 @@ li .active{
 }
 
 .image-content .content .cover:hover{
-    background-color: tomato;
+    background-color: #1c232d;
     opacity: .3;
 }
 
@@ -320,7 +321,7 @@ li .active{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: tomato;
+    color: #1c232d;
     background-color: white;
 }
 
@@ -340,31 +341,34 @@ li .active{
     width: 25vw;
     height: auto;
     overflow:auto;
-    margin: 0vh 4vw 0 0  ;
-    padding: 5px;
-    box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.46);
+    margin: 0vh 2vw 0 0  ;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 8px;
     z-index: 1;
+    transition: all .8s;
 }
 
-#service .row .card::before{
+/* #service .row .card::before{
    content:'';
    height: 2%;
    min-height: 2vh;
    width: 2vw;
    position: absolute;
-   background:linear-gradient(30deg,tomato,tomato);
+   background:linear-gradient(30deg,#1c232d,#1c232d);
    z-index: -1;
    transition: all .5s;
-}
+} */
 
 #service .row .card:hover{
-    color: white;
+   /* /color: white; */
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
-#service .row .card:hover::before{
+/* #service .row .card:hover::before{
     width: 25vw;
     height: 78%
-}
+} */
 
 #service .row .card .header{
     display: flex;
@@ -394,42 +398,45 @@ li .active{
     font-weight: 700;
     padding: 15px;
     margin: 0px;
-    background-color: tomato;
-    border : .5px solid white;
+    background-color: #1c232d;
+    border : .5px solid #1c232d;
+    transition: all .5s;
 }
 
 #service .row .card .btn-service:hover{
     cursor: pointer;
-    color: tomato;
+    color: #1c232d;
     background-color: white;
-    border : .5px solid tomato
+    border : .5px solid #1c232d
 }
 
 #service .row .card .btn-outline{
-    color: tomato;
+    color: #1c232d;
     background-color: white;
     width: 100%;
     font-weight: 700;
     padding: 15px;
-    margin: 0px;
-    border : .5px solid tomato;
+    margin: 0px 5px;
+    border : .5px solid #1c232d;
+    transition: all .5s;
 }
 
 #service .row .card .btn-outline:hover{
+    cursor: pointer;
     color: white;
-    background-color: tomato;
+    background-color: #1c232d;
     border : .5px solid white;
 }
 
 /* Contact Us */
 #contact{
-
     position: relative;
     display: flex;
-    height:92vh;
+    height:auto;
     color: white;
-    background-color:tomato;
+    background-color:#1c232d;
     background-position: right;
+    padding: 10px;
 }
 .contactus{
     display: flex;
@@ -452,21 +459,21 @@ li .active{
 
 .contact-form form input,
 .contact-form form textarea{
-    border:none;
-    outline: none;
-    margin: 5px;
-    padding: 10px;
     width: 300px;
-    background-color: rgb(226, 226, 226);
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    border: .5px solid rgb(255, 255, 255);
-    border-radius: 2px;
+    padding: 15px;
+    margin: 1vh 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.918);
+    border: 0.5px solid rgba(128, 128, 128, 0.337);
+    transition: all .2s;
 }
 
 .contact-form form input:focus, textarea:focus{
-    border: 1px solid white;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+    border: 0.5px solid #1c232d;
+    transform: scale(1.01);
 }
 
 .contact-form form input[type="button"]{
@@ -474,7 +481,7 @@ li .active{
     margin: 5px;
     padding: 15px;
     width: 150px;
-    background-color: tomato;
+    background-color: #1c232d;
     border: 1px solid white;
     color: white;
     margin-top: 20px;
@@ -483,7 +490,7 @@ li .active{
 .contact-form form input[type="button"]:hover{
     cursor: pointer;
     background-color: white;
-    color: tomato;
+    color: #1c232d;
 }
 
 .contact-info{
@@ -542,7 +549,7 @@ li .active{
     position: absolute;
     left: 0;
     opacity: .2;
-    background-color: tomato;
+    background-color: #1c232d;
     transition: all 1s;
 }
 
@@ -557,7 +564,7 @@ li .active{
     flex: 2;
     padding: 2vw;
     color: white;
-    background-color: tomato;
+    background-color: #1c232d;
     justify-content: center;
     align-items: center;
 }
@@ -613,7 +620,7 @@ li .active{
 .right form input[type="password"]:focus,
 .right form input[type="number"]:focus{
     background-color: white;
-    border: 0.5px solid tomato;
+    border: 0.5px solid #1c232d;
     transform: scale(1.01);
     transition: all .3s;
 }
@@ -625,15 +632,15 @@ li .active{
 }
 
 .right form .btn-reg{
-    color: tomato;
+    color: #1c232d;
     background-color: white;
-    border: 1px solid tomato;
+    border: 1px solid #1c232d;
     outline: none;
 }
 
 .right form .btn-reg:hover{
     color: white;
-    background-color: tomato;
+    background-color: #1c232d;
     cursor: pointer;
 }
 
@@ -641,30 +648,18 @@ li .active{
 
 #footer{
     height: auto;
-    background-color: tomato;   
+    background-color: #1c232d;   
 }
 
 #footer .footer{
     position: relative;
     display: flex;
-    flex: 4;
+    justify-content: center;
     color: white;
     padding: 1vw 2vw 2vw 2vw;
 }
 
-#footer .about-us{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding:0 4vw;
-}
-
-#footer .about-us p{
-    text-align: justify;
-}
-
 #footer .links{
-    flex: 2;
     display: flex;
     flex-direction: column;
     padding: 0 3vw;
@@ -694,13 +689,12 @@ li .active{
 
 #footer .end-line{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 10px 10px 6vw;
 }
 
 #footer .end-line p{
     margin: 0;
-    font-weight: bold;
     color: white;
 }
 
@@ -718,7 +712,7 @@ li .active{
         height: 8vh;
         width: 100%;
         justify-content: space-between;
-        background-color: tomato;
+        background-color: #1c232d;
     }
 
     .logo{
@@ -735,7 +729,7 @@ li .active{
         height: 100vh;
         padding-top: 50px;
         margin-top: 8vh ;
-        background-color: tomato;
+        background-color: #1c232d;
         transition: 0.5s;
         z-index: 999;
     }

@@ -1,69 +1,58 @@
 <?php
+  header('Access-Control-Allow-Origin: *');
+
+  require('./service.php');
+  include_once('./model.php');
+
+  $service = new CustomerService();
+
+  if($_SERVER['REQUEST_METHOD']=="POST"){
     
-    include './service.php';
-    include './model.php';
-
-    $service = new CustomerService();
-
     switch($_POST['action']){
 
-        case "insert":
-            $customer = new Customer();
-            $customer->setFirstName($_POST['firstName']);
-            $customer->setLastName($_POST['lastName']);
-            $customer->setEmailId($_POST['emailId']);
-            $customer->setMobileNumber($_POST['mobileNumber']);
-            $customer->setDateOfBirth($_POST['dateOfBirth']);
-            $customer->setPhoneNumber($_POST['phoneNumber']);
-            $customer->setTermAndCondition($_POST['termsAndCondtion']);
-
-            $result = $service->create($customer);
-
-            if($result){
-                echo "Registration successfull.";
-            }else{
-                echo "Registeration failed.";
-            }
-
-            break;
-        
-        case "read":
-            $result = $service->read();
-
+        case 'login':
+            $result = $service->login($_POST['username'],$_POST['password']);
             echo $result;
             break;
 
-        case "update":
+        case 'register':
+            $decode = json_decode($_POST['customer'],true);
             $customer = new Customer();
-            $customer->setFirstName($_POST['firstName']);
-            $customer->setLastName($_POST['lastName']);
-            $customer->setEmailId($_POST['emailId']);
-            $customer->setMobileNumber($_POST['mobileNumber']);
-            $customer->setDateOfBirth($_POST['dateOfBirth']);
-            $customer->setPhoneNumber($_POST['phoneNumber']);
-            $customer->setTermAndCondition($_POST['termsAndCondtion']);
-
-            $result = $service->update($_POST['id'],$customer);
-
-            if($result){
-                echo "Profile updated.";
-            }else{
-                echo "Failed to update.";
-            }
-
+            $customer->setFirstName($decode['firstname']);
+            $customer->setLastName($decode['lastname']);
+            $customer->setEmailId($decode['email']);
+            $customer->setPassword($decode['password']);
+            $customer->setMobileNumber($decode['mobileno']);
+            $customer->setTermAndCondition($decode['termandcondition']);
+            $customer->setCreateDate($decode['createdate']);
+            $result = $service->create($customer);
+            echo $result;          
+            break;
+            
+        case 'update':
+            $decode = json_decode($_POST['customer'],true);
+            $customer = new Customer();
+            $customer->setFirstName($decode['firstname']);
+            $customer->setLastName($decode['lastname']);
+            $customer->setEmailId($decode['email']);
+            $customer->setMobileNumber($decode['mobileno']);
+            $customer->setDateOfBirth($decode['dob']);
+            $result = $service->update($customer);
+            $result;
             break;
 
-        case "delete":
-            $id = $_POST['id'];
-
-            $result = $service->delete($id);
-
-            if($result){
-                echo 'Profile deleted.';
-            }else{
-                echo 'Fail to delete.';
-            }
-
+      }
+  }else{
+    switch($_GET['action']){
+        case 'read':
+            $result = $service->read();
+            echo $result;
+            break;
+        case 'readById':
+            $result = $service->readById($_GET['id']);
+            echo $result;
             break;
     }
-?>
+  }
+  
+?> 

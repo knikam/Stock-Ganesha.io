@@ -1,13 +1,12 @@
 <?php
 
-include './dto.php';
+require('./dto.php');
 
 class CustomerService{
 
     private $dto;
 
-    function CustomerService(){
-        
+    function __construct() {
         $this->dto = new CustomerDTO();
     }
 
@@ -19,6 +18,10 @@ class CustomerService{
         return $this->dto->read();
     }
 
+    function readById($id){
+        return $this->dto->readById($id);
+    }
+
     function update($id, $customer){
         return $this->dto->update($id, $customer);
     }
@@ -27,6 +30,9 @@ class CustomerService{
         return $this->dto->delete($id);
     }
 
+    function login($username,$password){
+        return $this->dto->login($username,$password);
+    }
 }
 
 ?>

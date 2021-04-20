@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: "Poppins";
-  font-size: 12px;
+  font-size: 14px;
   background-color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
@@ -29,24 +29,26 @@ section{
     height: 100vh;
 }
 
+h1{
+  font-size: 28px;
+}
 /* Profile */
 .sidenav {
   height: 100vh;
-  width: 20vw;
+  width: 18vw;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: tomato;
+  background-color: #1c232d;
   overflow-x: hidden;
   transition: 0.3s;
-  padding: 20px 0 0 32px;
+  padding: 20px 0 0 20px;
 }
 
 .sidenav .title {
   color: rgba(255, 255, 255, 0.829);
-  font-size: 28px;
-  text-transform: uppercase;
+  font-size: 24px;
   text-decoration: none;
   letter-spacing: 1.5px;
   font-weight: 600;
@@ -70,7 +72,7 @@ section{
 .sidenav a:hover {
   width: 100%;
   background-color: #ffffff;
-  color: tomato;
+  color: #1c232d;
 }
 
 .sidenav .close-btn {
@@ -79,18 +81,228 @@ section{
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 .main {
   margin-left: 20vw;
+  padding: 2vh 5vw;
 }
 
 .main .open-btn {
   display: none;
 }
 
+/* 
+  Profile
+*/
+
+#profile{
+  padding: 10px;
+}
+
+#profile .profile{
+  width: fit-content;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#profile .address{
+  width: fit-content;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#profile  .row input[type="text"],
+#profile  .row input[type="email"],
+#profile  .row input[type="password"],
+#profile  .row input[type="date"],
+#profile  .row input[type="number"]{
+  font-family: "Poppins";
+  width: 300px;
+  padding: 15px;
+  margin: 1vh 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.337);
+  border: 0.5px solid rgba(128, 128, 128, 0.337);
+  transition: all .3s;
+
+}
+
+#profile  .row input[type="text"]:focus,
+#profile  .row input[type="email"]:focus,
+#profile  .row input[type="password"]:focus,
+#profile  .row input[type="date"]:focus,
+#profile  .row input[type="number"]:focus{
+
+  background-color: white;
+  border: 0.5px solid #1c232d;
+  transform: scale(1.01);
+}
+
+#profile .row input[type="submit"]{
+  font-family: "Poppins";
+  margin: 1vh 20px;
+  padding: 15px;
+  width: 250px;
+  color: white;
+  background-color: #1c232d;
+  border: 1px solid #1c232d;
+  outline: none;
+  transition: all .5s;
+}
+
+#profile  .row input[type="submit"]:hover{
+  color: #1c232d;
+  background-color: White;
+  cursor: pointer;
+}
+
+
+/* My Subscriptions */
+
+#my-subscription{
+  padding: 10px;
+}
+
+.subscription{  
+  display: flex;
+}
+
+.subscription .card{
+  width: 30%;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: all .5s;
+}
+
+.subscription .card:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.subscription .buy-btn{
+  color: #1c232d;
+  background-color: white;
+  border: 1px solid #1c232d;
+  outline: none;
+}
+
+.subscription .buy-btn:hover{
+  color: white;
+  background-color: #1c232d;
+  cursor: pointer;
+}
+
+/* Add Subscription */
+
+#add-subscription{
+  padding: 10px;
+}
+
+#add-subscription h1{
+  padding: 10px;
+}
+
+/* Cart */
+
+#cart{
+  padding: 10px;
+}
+
+.summary{
+  display: flex;
+}
+
+
+#cart .cart{
+  margin: 30px;
+}
+
+#cart .cart .item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 40vw;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+#cart .cart .item .title{
+  padding: 0 10px;
+  width: 60%;
+}
+
+#cart .cart .item .price{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  padding: 0 10px;
+}
+
+#cart .cart .item .remove{
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  width: 20%;
+}
+
+#cart .sub-total,
+#cart .tax,
+#cart .total{
+  margin-left: 10px;
+  padding: 3px;
+}
+
+#cart span{
+  font-weight: bold;
+}
+
+#cart .summary .checkout{
+  width: 15vw;
+  margin: 35px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#cart .summary .checkout input{
+    width: 100%;
+    color: #1c232d;
+    background-color: white;
+    border: 1px solid #1c232d;
+    outline: none;
+    margin: 5px 0;
+    transition: all .4s;
+}
+
+#cart .summary .checkout input:hover{
+  color: white;
+  background-color: #1c232d;
+  cursor: pointer;
+}
+
+#cart .empty{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  color: grey;
+}
+
+/* Mobile  */
+
 @media screen and (max-width: 900px) {
+  
   .sidenav {
     padding: 30px 0 0 0px;
     width: 0;
@@ -102,7 +314,7 @@ section{
   }
 
   .sidenav .close-btn {
-    display: block;
+    display: inline-block;
   }
 
   .main {
@@ -113,7 +325,9 @@ section{
     cursor: pointer;
     display: block;
     font-size: 25px;
-    color: tomato;
+    color: #1c232d;
     padding: 15px 20px;
   }
+
+
 }

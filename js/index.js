@@ -1,3 +1,6 @@
+$(window).on('load', function(){
+    window.hi
+});
 
 $(window).on('scroll', function () {
 

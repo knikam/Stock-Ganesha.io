@@ -1,53 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | StockGanesha</title>
 
-    <link rel="stylesheet" href="../css/profile.css">
-     <!-- Popping Font -->
-     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <!-- Jquery -->
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-     <!-- JS file -->
-</head>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <!-- Popping Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Jquery -->
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Service Js -->
+    <script src="../js/actions/service.js"></script>
+    <!-- Auth Js -->
+    <script src = "../js/actions/auth.js"></script>
+    <!-- Subscribe Js -->
+    <script src="../js/actions/subscription.js"></script>
+    <!-- Address Js -->
+    <script src="../js/actions/address.js"></script>
+    <!-- Customer Js -->
+    <script src = "../js/actions/customer.js"></script>
+    <!-- cart js -->
+    <script src="../js/cart.js"></script>
+    <!-- Util -->
+    <script src="../js/util.js"></script>
+  </head>
 
-<body>
+  <body onload="init();">
     <nav id="mySidenav" class="sidenav">
-        <h1 class="title">StockGanesha</h1>
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-        <a href="#profile">Profile</a>
-        <a href="#my-subscription">My Subscription</a>
-        <a href="#add-subscription">Add Subscription</a>
-        <a href="#">Cart</a>
+      <h1 class="title">StockGanesha</h1>
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#profile">Profile</a>
+      <a href="#my-subscription">My Subscription</a>
+      <a href="#add-subscription">Add Subscription</a>
+      <a href="#cart">Cart</a>
+      <a href="#">Logout</a>
     </nav>
     <div class="main">
-        <span class="open-btn"  onclick="openNav()">&#9776;</span>
-        <section id="profile">
-            
-        </section>
-        <section id="my-subscription">
+      <span class="open-btn" onclick="openNav()">&#9776;</span>
+      <section id="profile">
+        <div class="header">
+          <h1>My profile</h1>
+          <p class="edit" id="edit">Edit</p>
+        </div>
+        <div class="profile">
+          <h3>Personal Information</h3>
+          <p class="error"></p>
+          <div class="row">
+            <input
+              type="text"
+              name="firstname"
+              placeholder="First Name"
+              value=""
+              required
+              disabled
+            />
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Last Name"
+              value=""
+              required
+              disabled
+            />
+          </div>
+          <div class="row">
+            <input type="email" name="email" placeholder="Email Id" value="" disabled />
+            <input
+              type="number"
+              name="mobileno"
+              placeholder="Mobile No"
+              value=""
+              required
+              disabled 
+            />
+          </div>
+          <div class="row">
+            <input type="date" name="dob" id="dateofbirth" disabled />
+          </div>
+          <div class="row">
+            <input type="submit" name="update" value="Update" id="personal-info" disabled/>
+          </div>
+        </div>
+        <div class="address">
+          <h3>Residence Information</h3>
+          <div class="row">
+            <input
+              type="text"
+              name="address1"
+              placeholder="address 1"
+              value=""
+              required
+              disabled
+            />
+            <input
+              type="text"
+              name="address2"
+              placeholder="address 2"
+              value=""
+              required
+              disabled
+            />
+          </div>
+          <div class="row">
+            <input
+              type="text"
+              name="city"
+              placeholder="City"
+              value=""
+              required
+              disabled
+            />
+            <input
+              type="text"
+              name="state"
+              placeholder="State"
+              value=""
+              required
+              disabled
+            />
+          </div>
+          <div class="row">
+            <input
+              type="text"
+              name="zipcode"
+              placeholder="Zipcode"
+              value=""
+              disabled
+            />
+          </div>
+          <div class="row">
+            <input type="submit" name="update" value="Update" id="address" disabled />
+          </div>
+        </div>
+      </section>
 
-        </section>
-        <section id="add-subscription">
+      <section id="my-subscription">
+        <h1>My Subscriptions</h1>
+        <div class="subscription my-sub">
+         <!-- Load Subscription from subscription.js -->
+        </div>
+      </section>
 
-        </section>
+      <section id="add-subscription">
+        <h1>Our Subscriptions packs</h1>
+        <div class="subscription add-sub">
+          <!-- Load Subscription from service.js -->
+        </div>
+      </section>
+
+      <section id="cart">
+        <h1>Cart</h1>
+        <div class="summary">
+          <div class="cart">
+           <!-- Add Service throu cart -->
+          </div>
+          <div class="checkout">
+            <h3>Summary</h3>
+            <div class="sub-total">
+              <p>Sub Total : <span>$00.00</span></p>
+            </div>
+            <div class="tax">
+              <p>Taxes : <span>$00.00</span></p>
+            </div>
+            <div class="total">
+              <p>Total : <span>$00.00</span></p>
+            </div>
+            <div class="checkout-btn">
+              <input class="btn" type="button" name="checkout" value="Checkout" />
+            </div>
+          </div>
+        </div>
+        <h2 class="empty">Cart is Empty</h2>
+      </section>
     </div>
 
     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "100vw";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0vw";
-        }
-        </script>
-</body>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100vw";
+      }
 
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0vw";
+      }
+    </script>
+  </body>
 </html>

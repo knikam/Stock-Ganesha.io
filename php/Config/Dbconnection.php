@@ -1,45 +1,38 @@
 <?php
+class Database{
+   const DB_HOSTNAME = 'localhost';
+   const DB_USERNAME = 'root';
+   const DB_PASSWORD = 'root';
+   const DB_NAME = 'stockganesha';
+   public $_db_connect;
+   protected $_sql;
+   protected $_result;
+   protected $_row;
 
-include "./Dbconfig.php";
+   function db_connect(){
+     $this->_db_connect = mysqli_connect(self::DB_HOSTNAME,self::DB_USERNAME,self::DB_PASSWORD,self::DB_NAME) or die(mysql_error());
+     return $this->_db_connect;
+   }
 
-class Dbconnection extends Dbconfig {
+   function sql(){
+       $this->_sql = 'SELECT * FROM customers';
+   }
 
-    public $connectionString;
-    public $dataSet;
-    private $sqlQuery;
-    
-    protected $databaseName;
-    protected $hostName;
-    protected $userName;
-    protected $passCode;
+   function query(){
+       $this->_result = mysqli_query($this->_db_connect,$this->_sql);
+   }
 
-    function Dbconnection() {
-        $this -> connectionString = NULL;
-        $this -> sqlQuery = NULL;
-        $this -> dataSet = NULL;
+   function fetch_array(){
+       while($this->_row = mysqli_fetch_array($this->_result)){
+           $username = $this->_row['first_name'];
 
-        $dbPara = new Dbconfig();
-        $this -> databaseName = $dbPara -> dbName;
-        $this -> hostName = $dbPara -> serverName;
-        $this -> userName = $dbPara -> userName;
-        $this -> passCode = $dbPara ->passCode;
-        $dbPara = NULL;
-    }
-  
-    function dbConnect()    {
-       // $this -> connectionString = new mysqli($this -> hostName,$this -> userName,$this -> passCode,$this -> databaseName);
-       $this -> connectionString = new mysqli('localhost','root','root','stockganesha');
-       return $this -> connectionString;
-    }
+           echo "<ul>";
+               echo "<li>".$username."</li>";
+           echo "</ul>";
+       }
+   }
 
-    function dbDisconnect() {
-        $this -> connectionString = NULL;
-        $this -> sqlQuery = NULL;
-        $this -> dataSet = NULL;
-        $this -> databaseName = NULL;
-        $this -> hostName = NULL;
-        $this -> userName = NULL;
-        $this -> passCode = NULL;
-    }
-  }
-
+   function db_close(){
+       mysqli_close($this->_db_connect);
+   }
+}

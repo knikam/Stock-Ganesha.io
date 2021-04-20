@@ -1,11 +1,10 @@
 <?php
-
 header('Access-Control-Allow-Origin: *');
 
 require('./service.php');
 include_once('./model.php');
 
-$service = new AddressService();
+$service = new Service();
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
@@ -15,11 +14,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             
             break;
 
-        case 'update':
-
-            break;
         case 'delete':
-            
+            echo $service->delete($_POST['id']);
             break;
     }
 
@@ -27,10 +23,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
     switch($_GET['action']){
         case 'read':
-            
+            echo $service->read();
             break;
-        case 'readById':
-            echo $service->read($_GET['id']);
-            break;
-    }   
+    }
+    
 }

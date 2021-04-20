@@ -1,15 +1,21 @@
 <?php
 
-class Customer{
+class customer{
 
     private $id;
     private $firstName;
     private $lastName;
     private $emailId;
+    private $password;
     private $mobileNumber;
     private $dateOfBirth;
     private $phoneNumber;
     private $termAndCondition;
+    private $createDate;
+
+    public function __construct() {
+        
+    }
 
     public function getId(){
        return $this->id;
@@ -19,7 +25,7 @@ class Customer{
        $this->id = $id;
     }
 
-    public function getFirstName($firstName){
+    public function getFirstName(){
         return $this->firstName;
     }
 
@@ -36,11 +42,19 @@ class Customer{
     }
 
     public function getEmailId(){
-        return $this->lastName;
+        return $this->emailId;
     }
 
     public function setEmailId($emailId){
         $this->emailId = $emailId;
+    }
+
+    public function getPassword(){
+        return $this->password;
+    }
+
+    public function setPassword($password){
+        $this->password = $password;
     }
 
     public function getMobileNumber(){
@@ -73,6 +87,14 @@ class Customer{
 
     public function setTermAndCondition($termAndCondition){
         $this->termAndCondition = $termAndCondition;
+    }
+
+    public function getCreateDate(){
+        return $this->createDate;
+    }
+
+    public function setCreateDate($createDate){
+        $this->createDate = $createDate;
     }
 }
 
