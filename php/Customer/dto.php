@@ -84,7 +84,7 @@ class CustomerDTO{
         $dec_password;
         $id;
 
-        while($row = mysqli_fetch_array($result)){
+        if($row = mysqli_fetch_array($result)){
             $dec_password = $row['password'];
             $id = $row['id'];
         }

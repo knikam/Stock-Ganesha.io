@@ -61,15 +61,14 @@ $(document).ready(function () {
             username: email,
             password: password,
         }, function (res) {
-            console.log(res);
+            
             var data = JSON.parse(res);
-            console.log(data.id);
             if (data.status) {
                 sessionStorage.setItem("id",data.id);
                 var url = "../../pages/profile.html?id="+data.id;
                 window.location.replace(url);
             } else {
-                alert("Invalid username password");
+                $(".error").text("Invalid username password.")
             }
         });
     });

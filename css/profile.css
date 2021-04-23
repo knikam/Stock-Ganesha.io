@@ -32,6 +32,7 @@ section{
 h1{
   font-size: 28px;
 }
+
 /* Profile */
 .sidenav {
   height: 100vh;
@@ -40,7 +41,9 @@ h1{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #1c232d;
+  background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow-x: hidden;
   transition: 0.3s;
   padding: 20px 0 0 20px;
@@ -97,7 +100,13 @@ h1{
 */
 
 #profile{
-  padding: 10px;
+  padding: 2px;
+}
+
+#profile .edit{
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 #profile .profile{
@@ -151,7 +160,9 @@ h1{
   padding: 15px;
   width: 250px;
   color: white;
-  background-color: #1c232d;
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 1px solid #1c232d;
   outline: none;
   transition: all .5s;
@@ -159,7 +170,7 @@ h1{
 
 #profile  .row input[type="submit"]:hover{
   color: #1c232d;
-  background-color: White;
+  background: White;
   cursor: pointer;
 }
 
@@ -177,7 +188,7 @@ h1{
 .subscription .card{
   width: 30%;
   padding: 20px;
-  margin: 10px;
+  margin: 0 10px 0 0;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   transition: all .5s;
@@ -196,17 +207,15 @@ h1{
 
 .subscription .buy-btn:hover{
   color: white;
-  background-color: #1c232d;
+  background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   cursor: pointer;
 }
 
 /* Add Subscription */
 
 #add-subscription{
-  padding: 10px;
-}
-
-#add-subscription h1{
   padding: 10px;
 }
 
@@ -287,7 +296,9 @@ h1{
 
 #cart .summary .checkout input:hover{
   color: white;
-  background-color: #1c232d;
+  background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   cursor: pointer;
 }
 

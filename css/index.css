@@ -5,7 +5,9 @@ html{
 body{
     font-family: "Poppins";
     font-size: 14px;
-    background-color: #1c232d;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     margin: 0;
     padding: 0;
 }
@@ -15,7 +17,7 @@ body{
     outline: none;
     font-size: 14px;
     font-weight: 600;
-    padding: 10px 30px;
+    padding: 15px 30px;
     border-radius: 2px;
 }
 
@@ -29,6 +31,10 @@ section{
     padding-top: 8vh;
 }
 
+section:nth-child(even){
+    background-color: white;
+}
+
 /* Header */
 
 header{ 
@@ -40,8 +46,10 @@ header{
     height: 8vh;
     justify-content: space-between;
     align-items: center;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     z-index: 1000;
-    background-color: #1c232d;
 }
 
 .menu{
@@ -55,18 +63,18 @@ header{
 }
 
 header .logo {
-    color: rgba(255, 255, 255, 0.659);
+    color: white;
     font-size: 24px;
     margin-left: 10px;
     padding: 5px;
-    text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1.5px;
     font-weight: 600;    
+    transition: all 1s;
 }
 
 .logo:hover{
-    color: white;
+    letter-spacing: 3px;
 }
 header ul{
     position: relative;
@@ -187,31 +195,30 @@ li .active{
     height: 92vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 0 5vw;
-    text-align: center;
 }
 
 .content h1{
-    font-size: 32px;
+    font-size: 48px;
 }
 
 .content p{
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .btn-register{
+    width: 40%;
     border: 1px solid white;
     color: #1c232d;
     font-weight: 600;
-    margin: 2vh 2vh 5vh 2vh;
+    margin: 2vh 2vh 5vh 0;
 }
 
 .btn-register:hover{
     cursor: pointer;
     border: 1px solid white;
-    background-color: #1c232d;
+    background-color: transparent;
     color: rgb(255, 255, 255);
 }
 
@@ -241,14 +248,15 @@ li .active{
 
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: .2s;
   }
   
   @-webkit-keyframes fade {
     from{
         opacity: 0;
+        transform: scale(1.);
     }
 
     to{
@@ -259,6 +267,7 @@ li .active{
   @keyframes fade {
     from{
         opacity: 0;
+        transform: scale(2);
     }
 
     to{
@@ -322,7 +331,6 @@ li .active{
     flex-direction: column;
     align-items: center;
     color: #1c232d;
-    background-color: white;
 }
 
 #service h1{
@@ -372,19 +380,20 @@ li .active{
 
 #service .row .card .header{
     display: flex;
-    text-transform: uppercase;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 0 1vw;
+}
+
+#service .row .card .header h3{
+    margin: 0 0 10px 0;
+    font-weight: 500;
 }
 
 #service .row .card .body{
     padding: 2vh 1vw;
-    text-align: left;
+    text-align: justify;
     
-}
-
-#service .row .card .body li{
-    margin: 10px 0;
 }
 
 #service .row .card .footer{
@@ -395,10 +404,12 @@ li .active{
 #service .row .card .btn-service{
     width: 100%;
     color: white;
+    text-decoration: none;
+    text-align: center;
     font-weight: 700;
     padding: 15px;
     margin: 0px;
-    background-color: #1c232d;
+    background: linear-gradient(to right, #414345, #232526);
     border : .5px solid #1c232d;
     transition: all .5s;
 }
@@ -406,7 +417,7 @@ li .active{
 #service .row .card .btn-service:hover{
     cursor: pointer;
     color: #1c232d;
-    background-color: white;
+    background: white;
     border : .5px solid #1c232d
 }
 
@@ -414,6 +425,8 @@ li .active{
     color: #1c232d;
     background-color: white;
     width: 100%;
+    text-decoration: none;
+    text-align: center;
     font-weight: 700;
     padding: 15px;
     margin: 0px 5px;
@@ -424,7 +437,7 @@ li .active{
 #service .row .card .btn-outline:hover{
     cursor: pointer;
     color: white;
-    background-color: #1c232d;
+    background: linear-gradient(to right, #414345, #232526);
     border : .5px solid white;
 }
 
@@ -432,9 +445,8 @@ li .active{
 #contact{
     position: relative;
     display: flex;
-    height:auto;
+    height:70vh;
     color: white;
-    background-color:#1c232d;
     background-position: right;
     padding: 10px;
 }
@@ -481,7 +493,7 @@ li .active{
     margin: 5px;
     padding: 15px;
     width: 150px;
-    background-color: #1c232d;
+    background-color: transparent;
     border: 1px solid white;
     color: white;
     margin-top: 20px;
@@ -532,7 +544,6 @@ li .active{
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: white;
 }
 
 #register .card{
@@ -564,7 +575,9 @@ li .active{
     flex: 2;
     padding: 2vw;
     color: white;
-    background-color: #1c232d;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
     justify-content: center;
     align-items: center;
 }
@@ -627,8 +640,8 @@ li .active{
 
 .right form input[type="button"]{
     width: 335px;
-    padding: 15px;
-    margin: 1vh 0;
+    padding:30px;
+    margin: 2vh 0;
 }
 
 .right form .btn-reg{
@@ -640,7 +653,7 @@ li .active{
 
 .right form .btn-reg:hover{
     color: white;
-    background-color: #1c232d;
+    background: linear-gradient(to right, #414345, #232526);
     cursor: pointer;
 }
 
@@ -648,7 +661,9 @@ li .active{
 
 #footer{
     height: auto;
-    background-color: #1c232d;   
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 }
 
 #footer .footer{
