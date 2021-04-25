@@ -334,14 +334,14 @@ li .active{
 }
 
 #service h1{
-    margin: 5vh 0;
+    margin: 0 0 5vh 0;
     font-size: 24px;
     text-align: center;
 }
 
 #service .row{
     display: flex;
-    margin: 3vh 0;
+    margin: 1vh 0;
 }
 
 #service .row .card{
@@ -350,7 +350,6 @@ li .active{
     height: auto;
     overflow:auto;
     margin: 0vh 2vw 0 0  ;
-    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 8px;
     z-index: 1;
@@ -382,7 +381,7 @@ li .active{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1vw;
+    padding: 20px;
 }
 
 #service .row .card .header h3{
@@ -391,7 +390,7 @@ li .active{
 }
 
 #service .row .card .body{
-    padding: 2vh 1vw;
+    padding: 20px;
     text-align: justify;
     
 }
@@ -399,6 +398,7 @@ li .active{
 #service .row .card .footer{
     display: flex;
     z-index: 1;
+    padding: 20px;
 }
 
 #service .row .card .btn-service{
@@ -445,7 +445,7 @@ li .active{
 #contact{
     position: relative;
     display: flex;
-    height:70vh;
+    height:auto;
     color: white;
     background-position: right;
     padding: 10px;
@@ -597,7 +597,7 @@ li .active{
     flex: 2;
     padding: 2vw;
     background: #fff;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 #register .right:hover{
